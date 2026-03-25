@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 st.set_page_config(page_title="Live Stock Quotes", page_icon="📈", layout="wide")
 
-st.title("Live Stock Prices (ASX + Nasdaq/NYSE)")
+st.title("Live Stock Prices ASX")
 st.write("Auto-refreshes every 30 seconds. Tap refresh if needed.")
 
 tickers = {
