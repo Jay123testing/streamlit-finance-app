@@ -9,11 +9,11 @@ st.title("Live Stock Prices (ASX + Nasdaq/NYSE)")
 st.write("Auto-refreshes every 30 seconds. Tap refresh if needed.")
 
 tickers = {
-    "Wisetech (ASX)": "WTC.AX",
-    "Woodside (ASX)": "WDS.AX",
+    "MONKA KA Wisetech (ASX)": "WTC.AX",
+    "MONKA KA Woodside (ASX)": "WDS.AX",
     "Audinate AD8 (ASX)": "AD8.AX",
-    "EdenRed (France)": "EDEN.PA",
-    "Campbell Soup CPB (NYSE)": "CPB",
+    "MONKA KA GOODMEN": "GMG.AX",
+    "MONKA KA CAR": "CAR.AX",
 }
 
 interval_sec = st.sidebar.selectbox("Refresh interval (seconds)", [15, 30, 60, 120], index=1)
