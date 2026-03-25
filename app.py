@@ -12,6 +12,7 @@ tickers = {
     "Wisetech (ASX)": "WTC.AX",
     "Woodside (ASX)": "WDS.AX",
     "Audinate AD8 (ASX)": "AD8.AX",
+    "EdenRed (France)": "EDEN.PA",
     "Campbell Soup CPB (NYSE)": "CPB",
 }
 
@@ -66,8 +67,8 @@ for name, symbol in tickers.items():
 st.sidebar.write("Last updated:", datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC"))
 st_autorefresh = st.experimental_set_query_params  # for Streamlit internal refresh path
 if st.sidebar.button("Force refresh now"):
-    if st.session_state.get("next_refresh") is None: st.session_state.next_refresh = 0 
+    st.experimental_rerun()
 
 # auto-refresh via st.experimental_rerun timers:
 st.write(f"Refreshing every {interval_sec} sec.")
-if st.session_state.get("next_refresh") is None: st.session_state.next_refresh = 0 
+st.experimental_rerun()
