@@ -70,4 +70,4 @@ if st.sidebar.button("Force refresh now"):
 
 # auto-refresh via st.experimental_rerun timers:
 st.write(f"Refreshing every {interval_sec} sec.")
-st.experimental_rerun()
+if st.session_state.get("next_refresh") is None: st.session_state.next_refresh = 0 
